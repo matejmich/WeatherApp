@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/dist/icons/page.png" type="image/x-icon">
+
 </head>
 <body>
-    hihi html
+    <div id="content">
+        <div id="top" class="row">
+            <div id="left" class="collumn">
+                <p id="clouds">Partly cloudy</p>
+                <p id="location">Prague</p>
+                <p id="location2"></p>
+                <p id="temperature">18 stC</p>
+                <button id="unitSwitchBtn">Switch To °C</button>
+                
+            </div>
+            <form id="form">
+                <input id="locationI" type="text" placeholder="Search Location...">
+                <img src="/dist/icons/search.png" alt="search" id="search">
+            </form>
+            <div id="right" class="collumn">
+                <div id="feelsLike-container">
+                    <p id="feelsLike"></p>
+                </div>
+                <div id="humidity-container">
+                    <p id="humidity"></p>
+                </div>
+                <div id="pressure-container">
+                    <p id="pressure"></p>
+                </div>
+                <div id="windSpeed-container">
+                    <p id="windSpeed"></p>
+                </div>
+            </div>
+        </div>
+        <p id="timeP">11:20</p>
+        <div id="forecast-container" class="row">
+            
+        </div>
+    </div>
 </body>
 </html>

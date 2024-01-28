@@ -1,0 +1,93 @@
+* {
+    color: white;
+    font-family: monospace;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+   
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+}
+p {
+    font-size: 15px;
+}
+#right {
+    align-items: end;
+}
+#right p {
+    font-size: 20px;
+}
+
+.collumn {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+form {
+    border-bottom: 2px solid white;
+    height: fit-content;
+}
+input {
+    border: none;
+    color: white;
+    background: none; 
+}
+input:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    color: white;
+}
+
+
+#search {
+    width: 1.3em;
+}
+
+img {
+    color: white;
+    filter: invert(100%)
+}
+#clouds {
+    font-size: 40px;
+    font-weight: bold;
+}
+#location {
+    font-size: 20px;
+}
+#timeP {
+    color: rgba(255, 255, 255, 0.432);
+    font-size: 8em;
+
+}
+#temperature {
+    font-size: 40px;
+    font-weight: bold;
+}
+button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
