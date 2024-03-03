@@ -19,14 +19,16 @@ async function getData() {
 }
 
 getData();
+const timeP: any = document.getElementById('timeP')
 let currentTime: string
 function getCurrentTime() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0'); // Ensure two digits
     const minutes = now.getMinutes().toString().padStart(2, '0'); // Ensure two digits
     currentTime = `${hours}:${minutes}`;
+    timeP.textContent = currentTime
 }
-
+getCurrentTime()
 const cloudsP: any = document.getElementById('clouds')
 const locationP: any = document.getElementById('location')
 const temperatureP: any = document.getElementById('temperature')
@@ -37,7 +39,6 @@ const windSpeedP: any = document.getElementById('windSpeed')
 const form: any = document.getElementById('form')
 const locationI: any = document.getElementById('locationI')
 const locationP2: any = document.getElementById('location2')
-const timeP: any = document.getElementById('timeP')
 const unitSwitchBtn = document.getElementById('unitSwitchBtn');
 
 form?.addEventListener('submit', (e: any) => {
@@ -45,13 +46,18 @@ form?.addEventListener('submit', (e: any) => {
     loc = locationI.value
     getData()
     getCurrentTime()
-    timeP.textContent = currentTime
+    
 
 })
 
 unitSwitchBtn?.addEventListener('click', () => {
     temperatureUnit = temperatureUnit === 'C' ? 'F' : 'C';
-    unitSwitchBtn.textContent = `Switch To °${temperatureUnit}`;
+    if(temperatureUnit === "C") {
+        unitSwitchBtn.textContent = `Switch To °C`;
+    } else {
+        unitSwitchBtn.textContent = "Switch to °F"
+    }
+    
     getData();
 });
  
